@@ -19,8 +19,8 @@ root.title(program_name)
 #section title
 tk.Label(root, text = "Limit Order", font = ("arial", 10, 'bold')).grid(row = 0, column = 3)
 tk.Label(root, text = "Market Order", font = ("arial", 10, 'bold')).grid(row = 7, column = 3)
-tk.Label(root, text = "Open Positions", foreground = "green", font = ('arial', 10 , 'bold',)).grid(row = 12, column = 1)
-tk.Label(root, text = "Open Orders", foreground = "green", font = ('arial', 10 , 'bold',)).grid(row = 14, column = 1)
+tk.Label(root, text = "Open Positions", foreground = "green", font = ('arial', 10 , 'bold',)).grid(row = 12, column = 5)
+tk.Label(root, text = "Open Orders", foreground = "green", font = ('arial', 10 , 'bold',)).grid(row = 14, column = 5)
 # labels for main selling/buying windows
 
 enterbuy_qty = tk.Entry(root)
@@ -76,6 +76,10 @@ buybut2 = tk.Button(root, text = "Buy/Long")
 buybut2.grid(row = 11, column =2 )
 sellbut2 = tk.Button(root, text = "Sell/Short")
 sellbut2.grid(row = 11, column =4 )
+cancel_limit = tk.Button(root, text = "Cancel Limit")
+cancel_limit.grid(row = 20, column =8, sticky = tk.E )
+Cancel_all = tk.Button(root, text = "Cancel all")
+Cancel_all.grid(row = 20, column =9, sticky = tk.W)
 
 #Market buy/sells
 mktqtybuy = tk.Label(root, text = "Qty")
@@ -116,9 +120,7 @@ open_orders = tk.Label(root, text = "Side").grid(row = 20, column = 4)
 open_orders = tk.Label(root, text = "Price").grid(row = 20, column = 5)
 open_orders = tk.Label(root, text = "Filled",width = 15).grid(row = 20, column = 6)
 open_orders = tk.Label(root, text = "Order Amount",width = 15).grid(row = 20, column = 7)
-open_orders = tk.Label(root, text = "		",width = 15).grid(row = 20, column = 8)
-open_orders = tk.Label(root, text = "		",width = 15).grid(row = 20, column = 9)
 
 
-root.mainloop()
+
 root.mainloop()
